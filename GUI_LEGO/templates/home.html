@@ -1,0 +1,170 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+{% block content %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+{#<div class="jumbotron text-center">#}
+{#  <h3>Lego Dashboard</h3>#}
+  <p><div class="container">
+<div class="alert alert-success alert-dismissable">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Successful login</strong>
+</div>
+
+</div>
+</div>
+    <body>
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:white;">
+        <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Warehouse Representation</button>
+
+<!-- Modal -->
+<div id="myModal2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Warehouse representation</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+    <br><br>
+        <!-- Trigger the modal with a button -->
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Temperature & Humidity</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Temperature from Arduino</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+      <br><br>
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Executed Task Log</button>
+
+<!-- Modal -->
+<div id="myModal1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Tasks Log</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+    <thead>
+      <tr>
+        <th>Date/Time</th>
+        <th>Task Name</th>
+        <th>Status or location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+<br><br>
+
+  </div>
+</div>
+    </div>
+    <div class="col-sm-9 col-md-6 col-lg-8" style="background-color:white;">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Task name</th>
+        <th>Task Description</th>
+        <th>Choose Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Task name1</td>
+        <td>this is a description of the task </td>
+        <td><button type="button" class="btn btn-success">Execute</button>
+            <button type="button" class="btn btn-danger">Cancel</button></td>
+      </tr>
+      <tr>
+        <td>Task 2</td>
+        <td>this is a description of the task </td>
+        <td><button type="button" class="btn btn-success">Execute</button>
+            <button type="button" class="btn btn-danger">Cancel</button></td>
+      </tr>
+      <tr>
+        <td>Task 3</td>
+        <td>this is a description of the task </td>
+        <td><button type="button" class="btn btn-success">Execute</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+    </body>
+    </html>
+{% endblock %}
